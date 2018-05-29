@@ -1,26 +1,30 @@
 ################################################################################
-# CMake
+# Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 2.8.3)
 project(turtlebot3_gazebo)
 
-set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+## Compile as C++11, supported in ROS Kinetic and newer
+add_compile_options(-std=c++11)
 
 ################################################################################
-# Packages
+# Find catkin packages and libraries for catkin and system dependencies
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  std_msgs
+  sensor_msgs
   geometry_msgs
   nav_msgs
-  roscpp
-  sensor_msgs
-  std_msgs
   tf
   gazebo_ros
 )
 
-find_package(gazebo REQUIRED
-)
+find_package(gazebo REQUIRED)
+
+################################################################################
+# Setup for python modules and scripts
+################################################################################
 
 ################################################################################
 # Declare ROS messages, services and actions
@@ -31,18 +35,18 @@ find_package(gazebo REQUIRED
 ################################################################################
 
 ################################################################################
-# Catkin specific configuration
+# Declare catkin specific configuration to be passed to dependent projects
 ################################################################################
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES turtlebot3_gazebo
-  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp sensor_msgs std_msgs tf gazebo_ros
+  CATKIN_DEPENDS roscpp std_msgs sensor_msgs geometry_msgs nav_msgs tf gazebo_ros
  )
 
 ################################################################################
 # Build
 ################################################################################
 link_directories(${GAZEBO_LIBRARY_DIRS})
+
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
@@ -50,33 +54,23 @@ include_directories(
   ${GAZEBO_INCLUDE_DIRS}
 )
 
-add_executable(gazebo_ros_turtlebot3 src/gazebo_ros_turtlebot3.cpp)
-target_link_libraries(gazebo_ros_turtlebot3 ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
-add_dependencies(gazebo_ros_turtlebot3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_executable(turtlebot3_drive src/turtlebot3_drive.cpp)
+add_dependencies(turtlebot3_drive ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(turtlebot3_drive ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ################################################################################
 # Install
 ################################################################################
-install(TARGETS gazebo_ros_turtlebot3
-       ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-       LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-       RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+install(TARGETS turtlebot3_drive
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(DIRECTORY include/${PROJECT_NAME}/
-       DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 
-install(DIRECTORY launch
-       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY rviz
-       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY models
-       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+install(DIRECTORY launch models rviz worlds 
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
 ################################################################################
