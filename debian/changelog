@@ -1,0 +1,122 @@
+ros-melodic-turtlebot3-simulations (1.1.0-0stretch) stretch; urgency=high
+
+  * added TurtleBot3 Waffle Pi
+  * modified uri path
+  * modified autorace
+  * delete remap
+  * Contributors: Darby Lim, Gilbert, Pyo
+
+ -- Pyo <pyo@robotis.com>  Thu, 19 Jul 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (1.0.2-0stretch) stretch; urgency=high
+
+  * added mission.launch modified model.sdf
+  * deleted turtlebot3's gazebo plugins
+  * modified autorace gazebo
+  * merged pull request #53 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/53> #52 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/52> #51 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/51> #50 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/50> #49 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/49>
+  * Contributors: Gilbert, Darby Lim, Pyo
+
+ -- Pyo <pyo@robotis.com>  Thu, 31 May 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (1.0.1-0stretch) stretch; urgency=high
+
+  * resolving dependency issues:
+    http://build.ros.org/job/Kbin_dj_dJ64__turtlebot3_gazebo__debian_jessie_amd64__binary/2/
+  * Contributors: Pyo
+
+ -- Pyo <pyo@robotis.com>  Tue, 29 May 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (1.0.0-0stretch) stretch; urgency=high
+
+  * added world for turtlebot3_autorace
+  * added world for turtlebot3_machine_learning
+  * merged pull request #46 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/46> from AuTURBO/develop
+    add turtlebot3_autorace world'
+  * merged pull request #48 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/48> #47 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/47> #44 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/44> #42 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/42> #41 <https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/41>
+  * Contributors: Darby Lim, Gilbert, hyunoklee, Pyo
+
+ -- Pyo <pyo@robotis.com>  Mon, 28 May 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.2.4-0stretch) stretch; urgency=high
+
+  * solved DuplicateVersionsException error
+  * Contributors: Pyo
+
+ -- Pyo <pyo@robotis.com>  Tue, 13 Mar 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.2.3-0stretch) stretch; urgency=high
+
+  * solved DuplicateVersionsException error
+  * Contributors: Pyo
+
+ -- Pyo <pyo@robotis.com>  Tue, 13 Mar 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.2.2-0stretch) stretch; urgency=high
+
+  * added line feed into metapackage
+  * Contributors: Pyo
+
+ -- Pyo <pyo@robotis.com>  Tue, 13 Mar 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.2.1-0stretch) stretch; urgency=high
+
+  * added worlds for gazebo and turtlebot3
+  * deleted turtlebot3_gazebo_plugin and merged into turtlebot3_gazebo_ros package
+  * Contributors: Darby Lim
+
+ -- Pyo <pyo@robotis.com>  Tue, 13 Mar 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.2.0-0stretch) stretch; urgency=high
+
+  * added TurtleBot3 Waffle Pi
+  * added slam with multiple tb3
+  * added multi example
+  * added turtlebot3_house
+  * added turtlebot3_house
+  * added msg function
+  * modified gazebo plugin
+  * modified tb3 control
+  * modified sensor param
+  * modified camera position
+  * modified image_listener
+  * modified cmake file
+  * modified spwn model name
+  * modified multi slam param
+  * modified camera position
+  * modified folder name
+  * Contributors: Darby Lim
+
+ -- Pyo <pyo@robotis.com>  Mon, 12 Mar 2018 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.1.7-0stretch) stretch; urgency=high
+
+  * renamed missed the install rule (worlds -> models)
+  * Contributors: Darby Lim, Tully Foote
+
+ -- Pyo <pyo@robotis.com>  Tue, 15 Aug 2017 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.1.6-0stretch) stretch; urgency=high
+
+  * modified folder name and model path
+  * updated rviz and add static tf publisher for depth camera
+  * Contributors: Darby Lim
+
+ -- Pyo <pyo@robotis.com>  Sun, 13 Aug 2017 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.1.5-0stretch) stretch; urgency=high
+
+  * modified make files for dependencies
+  * updated turtlebot3 sim
+  * updated world config
+  * Contributors: Darby Lim
+
+ -- Pyo <pyo@robotis.com>  Thu, 08 Jun 2017 15:00:00 -0000
+
+ros-melodic-turtlebot3-simulations (0.1.4-0stretch) stretch; urgency=high
+
+  * added as new meta-packages and version update (0.1.4)
+  * Contributors: Darby Lim, Pyo
+
+ -- Pyo <pyo@robotis.com>  Mon, 22 May 2017 15:00:00 -0000
+
+
