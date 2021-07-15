@@ -1,3 +1,29 @@
+## turtlebot3_simulations (melodic) - 1.3.2-1
+
+The packages in the `turtlebot3_simulations` repository were released into the `melodic` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t melodic -r melodic --edit` on `Thu, 15 Jul 2021 00:33:53 -0000`
+
+These packages were released:
+- `turtlebot3_fake`
+- `turtlebot3_gazebo`
+- `turtlebot3_simulations`
+
+Version of package(s) in repository `turtlebot3_simulations`:
+
+- upstream repository: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+- release repository: https://github.com/ROBOTIS-GIT-release/turtlebot3_simulations-release.git
+- rosdistro version: `1.3.1-1`
+- old version: `1.3.1-1`
+- new version: `1.3.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.1`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## turtlebot3_simulations (noetic) - 1.3.2-1
 
 The packages in the `turtlebot3_simulations` repository were released into the `noetic` distro by running `/usr/bin/bloom-release turtlebot3_simulations -t noetic -r noetic --edit` on `Wed, 14 Jul 2021 02:34:26 -0000`
