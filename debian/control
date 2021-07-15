@@ -1,0 +1,12 @@
+Source: ros-noetic-turtlebot3-gazebo
+Section: misc
+Priority: optional
+Maintainer: Will Son <willson@robotis.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-gazebo-ros, ros-noetic-geometry-msgs, ros-noetic-nav-msgs, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-std-msgs, ros-noetic-tf
+Homepage: http://wiki.ros.org/turtlebot3_gazebo
+Standards-Version: 3.9.2
+
+Package: ros-noetic-turtlebot3-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gazebo11, ros-noetic-gazebo-ros, ros-noetic-geometry-msgs, ros-noetic-nav-msgs, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-std-msgs, ros-noetic-tf, ros-noetic-turtlebot3-description
+Description: Gazebo simulation package for the TurtleBot3
